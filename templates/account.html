@@ -1,0 +1,46 @@
+{% extends "base-account.html" %}
+
+<!-- Add the title for the specific page -->
+{% block title %}Account{% endblock title %}
+
+<!-- Import macros from the 'macros.html' template -->
+{% from 'macros.html' import create_component_account %}
+
+<!-- Add the main content of the dashboard page -->
+{% block content %}
+<div class="container">
+
+    <!-- Add a section for the breadcrumb in the account page -->
+    <div class="page-section">
+        {% with b1="User", b2="Account" %}
+        {% include "breadcrumb.html" %}
+        {% endwith %}
+    </div>
+
+    <div class="container page__container">
+        <div class="page-section">
+            {{ create_component_account(
+                "Personal Information",
+                "Personal information as inserted into the TwinERGY Identity Server during the registration",
+                ["Full Name", "Username", "Email"],
+                ["account-fullname", "account-username", "account-email"]
+            ) }}
+
+            {{ create_component_account(
+                "Device Information",
+                "Information related to the hardware components as inserted into the TwinERGY Identity Server",
+                ["Wearable ID", "Gateway ID"],
+                ["account-device", "account-gateway"]
+            ) }}
+
+            {{ create_component_account(
+                "Building Information",
+                "Information related to the building and pilot side as inserted into the TwinERGY Identity Server",
+                ["Dwelling ID", "Pilot Site"],
+                ["account-dwelling", "account-pilot"]
+            ) }}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,38 @@
+{% from 'macros.html' import create_line_chart_dashboard, create_page_separator, create_status_card_dashboard, create_line_chart_dashboard_w_extra %}
+
+<div class="col-md-12">
+    <!-- Add the page separator component -->
+    {{ create_page_separator("Thermal Comfort") }}
+    <!-- Add the line chart component for metabolic rate -->
+    {{ create_line_chart_dashboard_w_extra('Thermal Comfort', 'sentiment_satisfied', 'session-thermal-comfort', 'latest-pmv') }}
+</div>
+
+
+<div class="col-md-8">
+    <!-- Add the page separator component -->
+    {{ create_page_separator("Indoor Environmental Parameters") }}
+    <div class="row">
+        <div class="col-md-6 chart-container">
+            <div class="chart-calibration">
+                <!-- Add the line chart component for air temperature -->
+                {{ create_line_chart_dashboard('Air Temperature', 'device_thermostat', 'session-temperature',
+                'latest-temperature') }}
+            </div>
+            <div class="h1 text-calibration">Calibrating</div>
+        </div>
+        <div class="col-md-6 chart-container">
+            <div class="chart-calibration">
+                <!-- Add the line chart component for relative humidity -->
+                {{ create_line_chart_dashboard('Relative Humidity', 'opacity', 'session-humidity', 'latest-humidity') }}
+            </div>
+            <div class="h1 text-calibration">Calibrating</div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <!-- Add the page separator component -->
+    {{ create_page_separator("Physiological Parameters") }}
+    <!-- Add the line chart component for metabolic rate -->
+    {{ create_line_chart_dashboard('Metabolic Rate', 'directions_run', 'session-metabolic', 'latest-met') }}
+</div>

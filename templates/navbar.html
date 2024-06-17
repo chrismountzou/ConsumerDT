@@ -1,0 +1,113 @@
+<div class="mdk-header js-mdk-header mb-0" data-domfactory-upgraded="mdk-header" id="header" style="padding-top: 64px;">
+
+    <div class="mdk-header-layout__content page-content ">
+
+        <div class="mdk-header__content">
+
+            <div class="navbar navbar-expand pr-0 navbar-dark-dodger-blue navbar-shadow mdk-header--fixed" id="default-navbar">
+
+                <a class="navbar-brand mr-16pt" href="/">
+                    <span class="avatar avatar-sm-basic-bar mr-32pt">
+                        <span class="avatar-title-navbar">
+                            <img alt="TwinERGY" src="{{ url_for('static', filename='images/logo/black_logo.png') }}" width=100% />
+                        </span>
+                    </span>
+                </a>
+
+                <span class="d-none d-md-flex align-items-center mr-32pt">
+
+                    <span class="avatar avatar-sm-basic-navbar mr-12pt">
+                        <span class="avatar-title rounded navbar-avatar">
+                          <i class="material-icons">house</i>
+                        </span>
+                    </span>
+
+                    <small class="flex d-flex flex-column">
+                        <strong class="navbar-text-100">Dwelling ID</strong>
+                        <span class="navbar-text-50" id="building-id">-</span>
+                    </small>
+                </span>
+
+                <span class="d-none d-md-flex align-items-center mr-32pt">
+
+                    <span class="avatar avatar-sm-basic-navbar mr-12pt">
+                        <span class="avatar-title rounded navbar-avatar">
+                            <i class="material-icons">watch</i>
+                        </span>
+                    </span>
+
+                    <small class="flex d-flex flex-column">
+                        <strong class="navbar-text-100">Wearable ID</strong>
+                        <span class="navbar-text-50" id="wearable-id">-</span>
+                    </small>
+
+                </span>
+
+                <span class="d-none d-md-flex align-items-center mr-32pt">
+
+                    <span class="avatar avatar-sm-basic-navbar mr-12pt">
+                        <span class="avatar-title rounded navbar-avatar">
+                            <div class="red-dot" style="background-color:white;"></div>
+                        </span>
+                    </span>
+
+                    <small class="flex d-flex flex-column">
+                        <strong class="navbar-text-100">Device Status</strong>
+                        <span class="navbar-text-50" id="device-status">-</span>
+                    </small>
+
+                </span>
+
+                <ul class="nav navbar-nav d-none d-sm-flex flex justify-content-start ml-8pt">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/thermal_comfort/">Thermal Comfort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/demand_side_management/">Demand-Side Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/preferences/">Preferences</a>
+                    </li>
+                </ul>
+
+                <div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link d-flex align-items-center dropdown-toggle" data-caret="false" data-toggle="dropdown" href="/">
+                            <span class="avatar avatar-sm-basic-navbar mr-8pt2">
+                                <span class="avatar-title rounded-circle bg-primary-yellow">
+                                    <i class="material-icons">person</i>
+                                </span>
+
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-header tab-content">
+                                        <strong id="username-id"></strong>
+                                        <i class="material-icons font-size-16pt text-warning">verified</i>
+                                    </div>
+                                    <a class="dropdown-item card-body tab-content" href="/account">
+                                        <i class="material-icons font-size-16pt text-warning">person</i>Account
+                                    </a>
+                                    <a class="dropdown-item card-body tab-content" href="/account_loads">
+                                        <i class="material-icons font-size-16pt text-warning">power</i>Load Configuration
+                                    </a>
+                                    <a class="dropdown-item card-body tab-content" href="/clothing_insulation">
+                                        <i class="material-icons font-size-16pt text-warning">checkroom</i>Clothing Insulation
+                                    </a>
+                                    <a class="dropdown-item card-body tab-content" href="/logout">
+                                        <i class="material-icons font-size-16pt text-warning">logout</i>Logout
+                                    </a>
+                                </div>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,12 @@
+<div class="container page__container page-section d-flex flex-column">
+    <img alt="TwinERGY Grant Agreement" src="{{ url_for('static', filename='images/licence.png') }}" width="100%"/>
+    <p class="mt-2">&copy; Copyright 2021 -
+        <span id="currentYear"></span>.
+        Developed by Applied Electronics Lab, Dept. of Electrical & Computer Engineering, University of Patras.
+    </p>
+</div>
+
+<!-- Add dynamically the current year to the copyright section of the footer. -->
+<script>
+   document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+</script>

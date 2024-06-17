@@ -1,0 +1,22 @@
+<!-- Extend the 'base.html' template for HTML page theming -->
+{% extends "base-empty.html" %}
+
+<!-- Add the title for the specific page -->
+{% block title %}Dashboard{% endblock title %}
+
+{% block content %}
+    <div class="pt-32pt">
+        <!-- Add a section for the breadcrumb in the dashboard page -->
+        <div class="page-section">
+            {% with b1="Dashboard", b2="" %}
+                {% include "breadcrumb.html" %}
+            {% endwith %}
+        </div>
+
+        <div class="page-section">
+            {% include 'dashboard-thermal-empty.html' %}
+        </div>
+
+</div>
+
+{% endblock content %}

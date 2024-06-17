@@ -1,0 +1,22 @@
+{% from 'macros.html' import create_line_chart_dashboard, create_page_separator, create_status_card_dashboard %}
+
+<div class="col-md-12">
+
+    {{ create_page_separator("Well-being Status") }}
+    {{ create_status_card_dashboard('sentiment_satisfied', 'latest-voc-desc') }}
+
+</div>
+
+<div class="col-md-12">
+
+    {{ create_page_separator("TVOC Index Analysis") }}
+
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Add the line chart component for metabolic rate -->
+            {{ create_line_chart_dashboard('TVOC', 'air', 'session-VOC', 'latest-voc-index') }}
+        </div>
+
+    </div>
+
+</div>
